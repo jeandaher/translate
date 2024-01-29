@@ -10,7 +10,7 @@ Transco
 ### Methods:     
 1. APEX Label by language    
 2. APEX Using Custom Label
-3. Manage Multi language in LWC (COMPLEX TO AVOID): create one component for all label, import it in the component, manage table by state, etc     
+3. Manage Multi language in LWC **(COMPLEX TO AVOID)**: create one component for all label, import it in the component, manage table by state, etc     
 
 
 ### Method 1. APEX Label by language     
