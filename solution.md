@@ -3,8 +3,8 @@
 Transco 
 
 | Code     |      Name     |  StatusLabel |  StatusMessage |
-|----------|:-------------:|:-------------|:---------------|
-| TRS1     |  left-aligned | Initial      | Step           |
+|----------|:--------------|:-------------|:---------------|
+| TRS1     | Trans 1       | Initial      | Step           |
 
 
 ### Methods:     
@@ -22,8 +22,8 @@ Transco
 ### Method 2. APEX Using Custom Label
 same structure    
 | Code     |      Name     |  StatusLabel |  StatusMessage |
-|----------|:-------------:|:-------------|:---------------|
-| TRS1     |  left-aligned | Initial      | Step           |
+|----------|:--------------|:-------------|:---------------|
+| TRS1     | Trans 1       | Initial      | Step           |
 
 
 ### Create 2 Custom Labels :    
