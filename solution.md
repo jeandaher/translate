@@ -30,6 +30,62 @@ same structure
 TRANS_STATUS_LABEL    
 TRANS_STATUS_MESSAGE    
 
+
+### APEX Class for Method1:    
+```.js
+public static Map<String, transco__mdt> getTransco() {
+   Map<String, transco_mdt> mcs = transco__mdt.getAll();
+   for (transco_mdt row: transco__mdt.getAll()) {
+      ...
+        switch on (language) {
+            when 'en' {
+                row.statusLabel = row.statusLabel;
+                row.statusMessage = row.statusMessage;
+            }
+            when 'fr' { 
+                row.statusLabel = row.statusLabel_fr;
+                row.statusMessage = row.statusMessage_fr;
+            }
+            when 'it' { 
+                row.statusLabel = row.statusLabel_it;
+                row.statusMessage = row.statusMessage_it;
+            }
+        }
+      ...
+    }  
+   }
+   return mcs;
+}
+```
+
+
+### APEX Class for Method2:  
+
+Add function  translate in DICE_Utilities
+```.js
+public static String translate(String labelName, String language, String defaultLabel) {
+   return Label.translationExists('', labelName, language)
+      ? Label.get('', labelName, language)
+      : defaultLabel;
+}
+```
+
+```.js
+public static Map<String, transco__mdt> getTransco() {
+   Map<String, transco_mdt> mcs = transco__mdt.getAll();
+   for (transco_mdt row: transco__mdt.getAll()) {
+      ...   
+       row.statusLabel = translate('TRANS_STATUS_LABEL', anguage,row.statusLabel);
+       row.statusMessage = translate('TRANS_STATUS_MESSAGE', anguage,row.statusMessage);
+      ...
+    }         
+   }
+   return mcs;
+}
+
+```
+
+
 ### Use Case, adding Spanish Language !    
 
 The procedure in Salesforce, export all labels and messages, in excel format, sent it to translation and import the labels of the new language.    
@@ -41,29 +97,19 @@ The procedure in Salesforce, export all labels and messages, in excel format, se
 |----------|:------------- |:-------------|:---------------|:------------------|:------------------|:------------------|:------------------|:------------------|:------------------|
 | TRS1     | Trans 1       | Initial      | Initiale       |Iniziale           |Inicial            | Step              | Etape             | Fare un passo     | Paso              |
 
-2. Change APEX Classe Codes to take into consideration the new language
+2. Change APEX Classe Codes to take into consideration the new language 'es'    
+
+            when 'es' { 
+                row.statusLabel = row.statusLabel_es;
+                row.statusMessage = row.statusMessage_es;
+            }
+
 
 ### Adding Spanish Language Method2:    
 Nothing to do    
 
 
 
-### APEX Class for Method1:    
-```.js
-
-```
-
-
-### APEX Class for Method2:  
-
-Add function  translate in DICE_Utilities
-```.js
-
-```
-
-```.js
-
-```
 
 
 
