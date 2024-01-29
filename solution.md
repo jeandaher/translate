@@ -43,17 +43,27 @@ The procedure in Salesforce, export all labels and messages, in excel format, se
 
 2. Change APEX Classe Codes to take into consideration the new language
 
-
-Method2:    
+### Adding Spanish Language Method2:    
 Nothing to do    
 
 
-APEX CLASS for Method1:
+
+### APEX Class for Method1:    
+```.js
+
+```
 
 
-APEX CLASS for Method2:
+### APEX Class for Method2:  
 
 Add function  translate in DICE_Utilities
+```.js
+
+```
+
+```.js
+
+```
 
 
 
