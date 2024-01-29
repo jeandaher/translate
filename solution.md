@@ -36,6 +36,7 @@ The procedure in Salesforce, export all labels and messages, in excel format, se
 
 ### Adding Spanish Language Method1:     
 1. Change the metadata structure, adding additional 2 fields: StatusLabel_es and StatusMessage_es
+   
 | Code     |      Name     |  StatusLabel |StatusLabel_fr  |  StatusLabel_it   |  StatusLabel_es   |  StatusMessage    |  StatusMessage_fr |  StatusMessage_it |  StatusMessage_es |
 |----------|:------------- |:-------------|:---------------|:------------------|:------------------|:------------------|:------------------|:------------------|:------------------|
 | TRS1     | Trans 1       | Initial      | Initiale       |Iniziale           |Inicial            | Step              | Etape             | Fare un passo     | Paso              |
